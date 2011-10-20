@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/raphael2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+var paper = Raphael('example1');
+for(var i = 0; i < 50000; i++) {
+  var c = Raphael.getColor();
+  paper.circle(Math.random() * 500, Math.random() * 500, Math.round(Math.random() * 50)).attr({"stroke" : c});
+}
+});
+
+</script>
+</head>
+<body>
+
+<div id="example1" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+</div>
+
+</body>
+</html>

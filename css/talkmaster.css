@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+}
+
+#bannerLeft,#bannerRight {
+  font-family: Conduit ITC Bold, Helvetica, Arial, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  line-height: 55px;
+  padding-left: 18px;
+  vertical-align: baseline;
+  text-shadow: #2C3339 2px 2px 12px;
+}
+
+#bannerLeft img,#bannerRight img {
+  margin: 0px;
+}
+
+.xleft,#bannerLeft,#bannerLeft img {
+  float: left;
+}
+
+.xright,#bannerRight {
+  float: right;
+}
+
+.tm-header {
+  height: 80px;
+  background: url(../img/bg.png);
+  color: #D0D7E4;
+}
+
+.tm-footer {
+  background: url(../img/bg.png);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 35px;
+}
+
+.tm-talk-title {
+	display: none;
+}
+
+.tm-slide {
+	display: none;
+  position: absolute;
+  top: 80px;
+  bottom: 50px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+  font-family: 'Conduit ITC Bold', Helvetica, Arial, sans-serif;
+  font-size: 26pt;
+  line-height: 55px;
+  color: #303030;
+  padding: 50px;
+}
+
+.tm-slide-center {
+  text-align: center;
+}
+
+.tm-slide-title {
+  font-size: 40pt;
+}
+
+.tm-slide p {
+  margin: 0 0 10px 0;
+}
+
+.tm-slide ul {
+  margin-top: 0;
+  font-size: 24pt;
+}
+
+.tm-footer a {
+  padding: 5px 30px;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+pre {
+  background-color: #efefef;
+  font-size: 17pt;
+  line-height: 19pt;
+}

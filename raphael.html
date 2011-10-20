@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/chili/jquery.chili-2.2.js"></script>
+<script type="text/javascript" src="js/chili/recipes.js"></script>
+<script type="text/javascript" src="js/raphael2.js"></script>
+<script type="text/javascript" src="js/lib/Base.js"></script>
+<script type="text/javascript" src="js/lib/Creole.js"></script>
+<script type="text/javascript" src="js/talkmaster.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+  new TalkMaster($(".tm-talk-title")[0].innerHTML);
+});
+
+</script>
+<link rel="stylesheet" href="css/talkmaster.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/talkmaster-print.css" type="text/css" media="print" />
+
+</head>
+<body>
+
+	<div class="tm-header">
+		<div id="bannerLeft">
+			<span class="tm-title-main"></span>: <span class="tm-title"></span>
+		</div>
+		<div class="tm-signum" id="bannerRight">
+			<img alt="" src="img/logo_panter.png">
+		</div>
+	</div>
+
+	<div class="tm-footer">
+		<a class="tm-nav-prev xleft" href="#">&lt;&lt;</a> <a
+			class="tm-nav-next xright" href="#">&gt;&gt;</a>
+	</div>
+	
+	<div class="tm-talk-title">
+	 Raphaël JS
+	</div>
+
+	<div class="tm-slide tm-slide-center tm-slide-title" title="Welcome!">
+		<div>Raphaël JS</div>
+
+		<svg height="100" version="1.1" width="100"
+			xmlns="http://www.w3.org/2000/svg"
+			style="overflow-x: hidden; overflow-y: hidden; position: relative;">
+			<desc>Created with Raphaël 2.0.0</desc>
+			<defs></defs>
+			<path style="" fill="#f89938" stroke="none"
+				d="M49.973,94.128C44.760999999999996,94.128,39.86,92.099,36.174,88.411L11.424,63.661C7.734,59.976,5.701,55.074,5.701,49.859C5.701,44.643,7.734,39.74,11.425,36.053000000000004L36.175,11.304000000000006C39.861,7.617000000000006,44.76,5.589000000000006,49.973,5.589000000000006C55.185,5.589000000000006,60.086,7.617000000000006,63.772999999999996,11.303000000000006L88.52199999999999,36.05500000000001C92.21199999999999,39.73800000000001,94.24699999999999,44.641000000000005,94.24699999999999,49.858000000000004C94.24699999999999,55.075,92.21299999999998,59.977000000000004,88.52099999999999,63.663000000000004L63.772,88.411C60.086,92.099,55.185,94.128,49.973,94.128L49.973,94.128Z"></path>
+			<path style="" fill="#3399ff" stroke="none"
+				d="M33.014,23.398C33.014,14.032,40.607,6.439,49.973,6.439C59.34,6.439,66.932,14.032,66.932,23.398C66.932,32.765,59.34,40.357,49.973,40.357C40.606,40.358,33.014,32.765,33.014,23.398"></path>
+			<path style="" fill="#333333" stroke="none"
+				d="M93.816,61.314C96.046,57.943,97.24600000000001,53.994,97.24600000000001,49.859C97.24600000000001,44.288000000000004,95.07400000000001,39.053000000000004,91.13400000000001,35.121L64.707,8.691L64.69699999999999,8.701C60.92599999999999,4.924,55.71799999999999,2.5840000000000005,49.97199999999999,2.5840000000000005S39.019,4.925,35.249,8.702L35.24,8.692L8.813,35.118C4.872000000000001,39.055,2.7010000000000005,44.290000000000006,2.7010000000000005,49.859C2.7010000000000005,55.427,4.871,60.662000000000006,8.811,64.596L32.64,88.42500000000001C33.595,89.49700000000001,34.599000000000004,90.50000000000001,35.657000000000004,91.42200000000001C39.542,95.10300000000001,44.6,97.12700000000001,49.972,97.12700000000001C55.537,97.12700000000001,60.771,94.96000000000001,64.706,91.02300000000001L90.416,65.31400000000001C90.481,65.25000000000001,90.54599999999999,65.18400000000001,90.61099999999999,65.11900000000001L91.13199999999999,64.59900000000002C92.12499999999999,63.60800000000002,93.005,62.533000000000015,93.767,61.39200000000002C93.785,61.36700000000002,93.804,61.34300000000002,93.823,61.31800000000002L93.816,61.314ZM89.535,49.859C89.535,52.451,88.783,54.925000000000004,87.39099999999999,57.043C86.556,58.183,85.68499999999999,59.179,84.78699999999999,60.04L84.723,60.104C80.496,64.125,75.72,65.264,71.667,65.264C69.437,65.264,67.424,64.91799999999999,65.842,64.51899999999999C56.579,62.17899999999999,46.51,54.20799999999999,41.902,42.58299999999999C44.385,43.63199999999999,47.112,44.21199999999999,49.972,44.21199999999999C60.719,44.21199999999999,69.588,36.02499999999999,70.674,25.56199999999999L85.683,40.56999999999999C88.167,43.053,89.535,46.351,89.535,49.859ZM49.973,10.294C57.2,10.294,63.077,16.173000000000002,63.077,23.398C63.077,30.624,57.199,36.503,49.973,36.503C42.748,36.503,36.87,30.624000000000002,36.87,23.398C36.87,16.173,42.748,10.294,49.973,10.294ZM14.262,59.146C11.779,56.665,10.411000000000001,53.367000000000004,10.411000000000001,49.86C10.411000000000001,46.352,11.778000000000002,43.054,14.261000000000001,40.574L24.415,30.418999999999997C21.765,39.440999999999995,20.627,48.934999999999995,21.237,58.036C21.456,61.307,21.907999999999998,64.44500000000001,22.558,67.44L14.262,59.146ZM31.621,33.206C33.851,50.655,47.663,67.878,63.95399999999999,71.995C66.60799999999999,72.665,69.21,72.995,71.72699999999999,72.995C71.76299999999999,72.995,71.79999999999998,72.992,71.83599999999998,72.992L59.255999999999986,85.57300000000001C56.774999999999984,88.052,53.47799999999999,89.418,49.97199999999999,89.418C47.530999999999985,89.418,45.198999999999984,88.742,43.16699999999999,87.504L43.170999999999985,87.497C42.37099999999999,86.967,41.60899999999999,86.368,40.86799999999999,85.734C40.80999999999999,85.67699999999999,40.74799999999999,85.63,40.69099999999999,85.573L38.14899999999999,83.03099999999999C32.92199999999998,77.02999999999999,29.634999999999987,68.101,28.927999999999987,57.52099999999999C28.393,49.515,29.354,41.167,31.621,33.206"></path></svg>
+	</div>
+
+
+	<div class="tm-slide" title="Introduction">
+		<pre>
+Raphaël JS 
+* JavaScript library (obvious!)
+* browser based graphics drawing 
+* vector graphics 
+* **but not** (explicitly) an SVG library
+	  </pre>
+	</div>
+	
+	<div class="tm-slide" title="Raphaël JS vs. HTML5 Canvas">
+		<pre>
+Raphaël JS: 
+* vector based 
+* shapes are part of the DOM tree 
+* interaction with elements via DOM (events, ...) 
+
+HTML5 Canvas: 
+* bitmap based
+* single DOM element (the "canvas"-tag)
+* no DOM-style interaction
+		</pre>
+	</div>
+	
+	<div class="tm-slide" title="Raphael JS vs. HTML5 Canvas">
+		<pre>
+Raphaël JS: 
+* wide browser support (FF3+, WebKit3+, **IE6+**)
+* SVG engine in FF, WebKit, IE9
+* VML engine in IE6-8
+
+HTML5 Canvas:
+* only supported by new browsers (IE: 9+)
+		</pre>
+	</div>
+
+	<div class="tm-slide" title="Getting started">
+		<pre>
+	 HTML:
+	 </pre>
+	 <pre class="html">
+&lt;div id="example1" style="border: 1px solid #000; width: 500px; height: 500px;">
+  &lt;!-- here goes the graphics -->
+&lt;/div></pre>
+	 <pre>
+	 JavaScript:
+	 </pre>
+	 <pre class="js">
+var paper = Raphael('example1');
+paper.circle(250, 250, 50);
+paper.ellipse(50, 350, 100, 50);
+paper.rect(150, 100, 200, 50);
+paper.rect(350, 250, 100, 50, 6); // rounded corners
+paper.path("M50 50 L100 50 L50 100 L50 50");
+paper.text(200, 200, "Some text");</pre>
+	</div>
+	
+	<div class="tm-slide tm-slide-center" title="Basic shapes">
+    <div id="example1" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+    </div>
+    <script type="text/javascript">
+    var ex1 = Raphael('example1');
+    ex1.circle(250, 250, 50);
+    ex1.ellipse(50, 350, 100, 50);
+    ex1.rect(150, 100, 200, 50);
+    ex1.rect(350, 250, 100, 50, 6); // rounded corners
+    ex1.path("M50 50 L100 50 L50 100 L50 50");
+    ex1.text(200, 200, "Some text");
+    </script>
+	</div>
+	
+	<div class="tm-slide" title="Shape attributes">
+	  <pre>Setting shape/element attributes: {{{attr()}}}</pre>
+	  <pre class="js">
+// solid fill, with opacity
+paper.circle(250, 250, 50).attr({
+  "stroke-width" : 3, "fill" : "#000", "opacity" : 0.5
+});
+
+// radial gradient fill
+paper.ellipse(50, 350, 100, 50).attr({
+  "fill" : "r(0.25, 0.75)#fff-#000" 
+});
+
+// linear gradient fill
+paper.rect(150, 100, 200, 50).attr({
+  "stroke-width" : 3, "fill" : "90-#ff0000-#fff-#0000ff"
+});
+
+// dashed stroke 
+paper.path("M50 50 L100 50 L50 100 L50 50").attr({
+  "stroke-dasharray" : "- ", "fill" : "#0000ff" 
+});
+	  </pre>
+	</div>
+	
+	<div class="tm-slide tm-slide-center" title="Shape attributes">
+    <div id="example2" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+    </div>
+    <script type="text/javascript">
+    var ex2 = Raphael('example2');
+    ex2.circle(250, 250, 50).attr({
+      "stroke-width" : 3,
+      "fill" : "#000",
+      "opacity" : 0.5
+    });
+    ex2.ellipse(50, 350, 100, 50).attr({
+      "fill" : "r(0.25, 0.75)#fff-#000" 
+    });
+    ex2.rect(150, 100, 200, 50).attr({
+      "stroke-width" : 3,
+      "fill" : "90-#ff0000-#fff-#0000ff"
+    });
+    ex2.path("M50 50 L100 50 L50 100 L50 50").attr({
+      "stroke-dasharray" : "- ",
+      "fill" : "#0000ff" 
+    });
+    </script>
+  </div>
+  
+  <div class="tm-slide" title="Animating shapes">
+    <pre>
+Animating shapes
+* using the {{{animate(...)}}}-method
+* arguments: new attributes, duration, easing-formula and optional callback function</pre>
+    <pre class="js">
+var circle = paper.circle(250, 250, 50).attr({"fill" : "#506090"});
+// ...
+circle.animate({ cx: 100, cy: 100, r : 10}, 500, "linear");
+// ...
+circle.animate({ cx: 400, cy: 400, r : 90}, 500, "bounce");
+// ...
+circle.animate({ cx: 250, cy: 250, r : 50}, 500, "elastic", function() {
+  alert("Back to center!");
+});
+    </pre>
+  </div>
+  
+  <div class="tm-slide tm-slide-center" title="Animating shapes">
+    <div id="example3" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+    </div>
+    <a href="#" id="ex3-up" style="font-size: 10pt;">up left</a> 
+    <a href="#" id="ex3-down" style="font-size: 10pt;">down right</a>  
+    <a href="#" id="ex3-back" style="font-size: 10pt;">back to center</a>
+    <script type="text/javascript">
+    var ex3 = Raphael('example3');
+    var ex3circle = ex3.circle(250, 250, 50).attr({"fill" : "#506090"});
+    
+    $(document).ready(function() {
+	    $("#ex3-up").bind("click", function() {
+	      ex3circle.animate({ cx: 100, cy: 100, r : 10}, 500, "linear");
+	      return false;
+	    });
+	    $("#ex3-down").bind("click", function() {
+	      ex3circle.animate({ cx: 400, cy: 400, r: 90}, 500, "bounce");
+	      return false;
+	    });
+	    $("#ex3-back").bind("click", function() {
+	      ex3circle.animate({ cx: 250, cy: 250, r: 50}, 500, "elastic", function() {
+	        alert("Back to center!");
+	      });
+	      return false;
+	    });
+    });
+    </script>
+  </div>
+  
+  <div class="tm-slide" title="Add event handlers to shapes">
+    <pre>
+Attach event handlers
+* every shape is a DOM elements and thus supports DOM events 
+* the DOM node is accessible via the {{{.node}}}-property
+* (Raphael also provides it's own methods to attach event handlers)</pre>
+    <pre class="js">
+var circle = paper.circle(250, 250, 50).attr({"fill" : "#506090"});
+
+// attach a handler (JQuery)
+$(circle.node).bind("mouseover", function() {
+  var nx = Math.random() * 500;
+  var ny = Math.random() * 500;
+  circle.animate({ cx : nx, cy : ny}, 500, "bounce"); 
+});
+    </pre>
+  </div>
+  
+  <div class="tm-slide tm-slide-center" title="Add event handlers to shapes">
+    <div id="example4" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+    </div>
+    <script type="text/javascript">
+    var ex4 = Raphael('example4');
+    var ex4circle = ex4.circle(250, 250, 50).attr({"fill" : "#506090"});
+    $(ex4circle.node).bind("mouseover", function() {
+      var nx = Math.random() * 500;
+      var ny = Math.random() * 500;
+      ex4circle.animate({ cx : nx, cy : ny}, 500, "bounce"); 
+    });
+    </script>
+  </div>
+  
+  <div class="tm-slide" title="Extend Raphael">
+    <pre>
+Add custom methods to Raphael canvas:
+</pre>
+    <pre class="js">
+Raphael.fn.star = function(cx, cy, ir, or, n) {
+  var a = Math.PI / n;
+  var sa = 0; // (Math.PI / 3);
+  var path = "M" + (cx) + " " + (cy + or) + " ";
+  for ( var i = 0; i < n; i++) {
+    var a1 = sa + (a * (i * 2));
+    var a2 = sa + (a * (i * 2 + 1));
+    path += "L" + (cx + Math.sin(a1) * or) + " " + (cy + Math.cos(a1) * or) + " ";
+    path += "L" + (cx + Math.sin(a2) * ir) + " " + (cy + Math.cos(a2) * ir) + " ";
+  }
+  path += "L" + (cx) + " " + (cy + or) + " ";
+  return this.path(path);
+}
+
+// now draw some stars...
+var paper = Raphael('paper');
+paper.star(300, 300, 20, 40, 7).attr({ "stroke" : "#a0a000" });
+paper.star(100, 300, 5, 60, 6).attr({ "fill" : "#40d0ff" });
+paper.star(350, 150, 50, 60, 50).attr({ "fill" : "#ffff00", "stroke" : "#ff0000" });
+    </pre>
+  </div>
+    
+  <div class="tm-slide tm-slide-center" title="Extend Raphael">
+    <div id="example5" style="border: 1px solid #000; width: 500px; height: 500px; margin: 0 auto 0 auto;">
+    </div>
+    <script type="text/javascript">
+    Raphael.fn.star = function(cx, cy, ir, or, n) {
+      var a = Math.PI / n;
+      var sa = 0;
+      var path = "M" + (cx) + " " + (cy + or) + " ";
+      for ( var i = 0; i < n; i++) {
+        var a1 = sa + (a * (i * 2));
+        var a2 = sa + (a * (i * 2 + 1));
+        path += "L" + (cx + Math.sin(a1) * or) + " " + (cy + Math.cos(a1) * or) + " ";
+        path += "L" + (cx + Math.sin(a2) * ir) + " " + (cy + Math.cos(a2) * ir) + " ";
+      }
+      path += "L" + (cx) + " " + (cy + or) + " ";
+      return this.path(path);
+    }
+    
+    var ex5 = Raphael('example5');
+    ex5.star(300, 300, 20, 40, 7).attr({ "stroke" : "#a0a000" });
+    ex5.star(100, 300, 5, 60, 6).attr({ "fill" : "#40d0ff" });
+    ex5.star(350, 150, 50, 60, 50).attr({ "fill" : "#ffff00", "stroke" : "#ff0000" })
+    </script>
+  </div>
+  
+	<div class="tm-slide" title="Some pit falls">
+	<pre>
+Some pit falls...
+* grouping of elements (i.e. svg:g element) not supported
+* drawing of complex graphics with thousands of elements may get slow (IE6-8!)
+* mixing with plain SVG images not directly supported (IE compatibility) 
+	</pre>
+	</div>
+	
+	<div class="tm-slide tm-slide-center" title="Thank you!">
+	<pre>
+More examples and documentation:
+
+[[http://raphaeljs.com]] 
+	</pre>
+	</div>
+
+</body>
+</html>
