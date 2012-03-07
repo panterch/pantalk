@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/talkmaster-pretify.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  talkmaster = new TalkMaster($(".tm-talk-title")[0].innerHTML);
+});
+
+</script>
+<link rel="stylesheet" href="css/talkmaster.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/talkmaster-print.css" type="text/css" media="print" />
+<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+
+<style TYPE="text/css"> 
+ .script, .ee {
+  background-image: url(img/script.png);
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+
+ .ee {
+  background-image: url(img/ee.png);
+ }
+
+ pre.prettyprint {
+   border: 0px;
+   background-color: transparent;
+   font-size: 26pt;
+   line-height: 30pt;
+ }
+
+ em {
+  display: block;
+ }
+
+ h1 {
+   font-size: 26pt;
+ }
+</style>
+
+</head>
+<body>
+
+	<div class="tm-header">
+		<div id="bannerLeft">
+			<span class="tm-title-main"></span>: <span class="tm-title"></span>
+		</div>
+		<div class="tm-signum" id="bannerRight">
+			<img alt="" src="img/logo_panter.png">
+		</div>
+	</div>
+
+	<div class="tm-footer">
+		<a class="tm-nav-prev xleft" href="#">&lt;&lt;</a> <a
+			class="tm-nav-next xright" href="#">&gt;&gt;</a>
+	</div>
+	
+	<!-- ********************************************************************* -->
+	<!-- EDIT YOUR PRESENTATION SLIDES BELOW HERE                              -->
+  <!-- ........................................                              -->
+  <!--                                                                       -->
+  <!-- Slide formatting:                                                     -->
+  <!--                                                                       -->
+  <!-- o everthing inside pre-tag with the class prettyprint will be         -->
+  <!--   prettified, see                                                     -->
+  <!--   http://google-code-prettify.googlecode.com                          -->
+  <!--                                                                       -->
+	<!-- ********************************************************************* -->
+	
+	<!-- Presentation title -->
+	<div class="tm-talk-title">
+	  Enterprise Software
+	</div>
+	
+
+  <div class="tm-slide tm-slide-center" title="Scripting and the enterprise" >
+  <img src='img/faust.jpg' style='float:left; width: 20%'></img>
+  <em style='float:left; width: 70%; padding: 0 20px'>
+  Zwei Seelen wohnen, ach! in meiner Brust, die eine will sich von der andern
+  trennen: die eine hält in derber Liebeslust sich an die Welt mit klammernden
+  Organen; die andre hebt gewaltsam sich vom Dust zu den Gefilden hoher Ahnen.
+  <em>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>Agenda</h1>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>Who's here</h1>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>About panter llc</h1>
+    <h1><a href="http://panter.ch/pantalk">http://panter.ch/pantalk</a></h1>
+    <img src="img/pony.gif"></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>About the speaker</h1>
+    <h1><a href="https://github.com/panter">https://github.com/panter</a></h1>
+    <img src="img/developer.jpg"></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+  <h1>About the enterprise</h1>
+  <em>
+  Enterprise applications are about the display, manipulation, and storage of
+  large amounts of often complex data and the support or automation of business
+  processes with that data.
+  (Fowler)
+  </em> 
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>Is $interpreted_language ready for the enterprise?</h1>
+    <img src='img/enterprise_ready.png'></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>Is the enterprise ready for $interpreted_language?</h1>
+    <img src='img/duck_typing.png'></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Does the language matter?</h1>
+	</div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+    <h1>Convention: Java</h1>
+<pre class="prettyprint">
+System.out.println("Hello, world!");
+</pre>
+	</div>
+
+  <div class="tm-slide script" title="Enterprise Software">
+    <h1>Convention: Script (Ruby / Coffee)</h1>
+<pre class="prettyprint">
+puts "Hello, world!"
+</pre>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Language Features</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Typing</h1>
+	</div>
+
+  <div class="tm-slide script" title="Enterprise Software">
+  <h1>Ruby types</h1>
+
+
+<pre class="prettyprint">
+
+class Duck
+  def quack
+    puts "Quaaaaaack!"
+  end
+ 
+  def feathers
+    puts "The duck has white and gray feathers."
+  end
+end
+</pre>
+
+  </div>
+  <div class="tm-slide script" title="Enterprise Software">
+
+<pre class="prettyprint">
+ 
+class Person
+  def quack
+    puts "The person imitates a duck."
+  end
+ 
+  def feathers
+    puts "The person takes a feather from the ground and shows it."
+  end
+end
+ 
+  </div>
+
+  <div class="tm-slide script" title="Enterprise Software">
+<pre class="prettyprint">
+def in_the_forest duck
+  duck.quack
+  duck.feathers
+end
+ 
+def game
+  donald = Duck.new
+  john = Person.new
+  in_the_forest donald
+  in_the_forest john
+end
+
+</pre>
+	</div>
+
+  <div class="tm-slide script" title="Enterprise Software">
+<h1>Ruby has modules</h1>
+<pre class="prettyprint">
+module Duckish
+  def quack
+    puts "Q u a c k"
+  end
+end
+
+class Duck
+  include Duckish
+end
+
+class Person
+  include Duckish
+end
+</pre>
+	</div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+  <h1>Java Typing</h1>
+<pre class="prettyprint">
+int i = 1;
+String s = new String();
+Object n = null;
+Map&lt;String, Integer&gt; m = new HashMap&lt;String, Integer&gt;();
+</pre>
+  </div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+<h1>Compile time typing means polymorphism</h1>
+<pre class="prettyprint">
+public void quack(Person p) {
+  ...
+}
+
+public void quack(Duck d) {
+  ...
+}
+</pre>
+  </div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+  <h1>Java has interfaces</h1>
+<pre class="prettyprint">
+public interface Duckish() {
+  public abstract void quack();
+}
+
+public class Duck implements Duckish() {
+  public void quack() {
+    ..
+  }
+}
+
+Duckish d = new Duck();
+</pre>
+  </div>
+
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Boilerplate</h1>
+  </div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+  <h1>Java</h1>
+<pre class="prettyprint">
+package ch.panter.samples.helloworld;
+
+public class HelloWorld {
+	
+	public static void main(String[] args) {
+		System.out.println("Hello, world!");
+	}
+}
+</pre>
+  </div>
+
+
+  <div class="tm-slide script" title="Enterprise Software">
+  <h1>Ruby</h1>
+<pre class="prettyprint">
+puts "Hello, world"
+</pre>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Closures</h1>
+	</div>
+
+  <div class="tm-slide ee" title="Enterprise Software">
+<pre class="prettyprint">
+List<Integer> a = new ArrayList<Integer>();
+a.add(1);
+a.add(2);
+a.add(3);
+a.add(4);
+a.add(5);
+List<Integer> b = new ArrayList<Integer>();
+for (Integer x : a) {
+	b.add(10*x);
+}
+</pre>
+</div>
+
+  <div class="tm-slide script" title="Enterprise Software">
+<pre class="prettyprint">
+a = [1,2,3,4,5]
+b = a.collect{|x| 10*x}
+</pre>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Virtual Machine</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/jvm.png"></img>
+	</div>
+
+  <div class="tm-slide" title="Enterprise Software">
+    <h1>MRI</h1>
+<ul>
+<li>Performance -- the Ruby interpreter's performance trails that of comparable
+languages such as Perl, and Python, mainly due to the design of the
+interpreter: To execute Ruby code, the interpreter builds a syntax tree from
+the source code and then evaluates the syntax tree directly, instead of first
+compiling it into more efficiently executable form.</li>
+<li>Backward compatibility -- version 1.9 and 1.8 have slight semantic differences.</li>
+</ul>
+	</div>
+
+  <div class="tm-slide" title="Enterprise Software">
+<h1>btw</h1>
+Whether mri is written in ruby, nor is HotSport written in Java...
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Ecosystem</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/gems.png"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/mvn.png"></img>
+	</div>
+
+  <div class="tm-slide" title="Enterprise Software">
+<ul>
+<li>Both languages introduced plugin system and infrastructure later</li>
+<li>Both languages are broadly accepted by open source community</li>
+<li>Component granularity differs dramatically</li>
+</ul>
+  </div>
+	
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Mindset / People</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Java: Senior Software Architect</h1>
+    <img src="img/cathedral.jpg"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Reality: Zombie Fortress</h1>
+    <img src="img/zombie.jpg" style="height: 80%"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Ruby: The pragmatic programmer</h1>
+    <img src="img/tpp.jpg"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Reality: Internet Hero</h1>
+    <img src="img/hero.jpg"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Building Software</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Use Rails & Jquery. Period.</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/jquery.gif" style="width: 100%"></img>
+	</div>
+
+  <div class="tm-slide" title="Enterprise Software">
+    <h1>But what if ...</h1>
+<ul>
+<li>Messaging</li>
+<li>Soap</li>
+<li>Run on windows</li>
+<li>Conform to "Enterprise" standards</li>
+<li>Implement business rules</li>
+<li>Work with threads</li>
+<li>Run standalong</li>
+<li>Run inside a firewall</li>
+<li>Projects that take longer than 3 months</li>
+<li>Perform</li>
+<li>Ship something packaged</li>
+<li>...</li>
+</ul>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/FFFFFFFFFFFUUUUUUUUUUUUUUUUU.png" ></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <img src="img/sponge.jpg"</img>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#0: Reserve a lot of time</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>#1: Get eclipse</h1>
+    <img src="img/eclipse.jpg"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#2: Get maven</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#3: Get a library that does the job</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#4: Get a library that does the other job</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#5: Get junit</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#6: Get a container (to run the software in)</h1>
+    <img src="img/osgi.png"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#7: Get a container (to weave the software)</h1>
+    <pre class="prettyprint">
+    <strike>Duckish d = new Duck();</strike>
+    </pre>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#8: Get a logger</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>#9: Get the job done</h1>
+    <img src="img/tdd.jpg"></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center ee" title="Enterprise Software">
+    <h1>Read the docs, ask your friends</h1>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Enterprise Software">
+    <h1>Conclusion: I ❤ ❤ ❤ ❤ ❤ ❤  them both</h1>
+    <img src="img/full.jpg"></img>
+	</div>
+
+
+</body>
+</html>
