@@ -5,21 +5,22 @@
 <title></title>
 
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/chili/jquery.chili-2.2.js"></script>
-<script type="text/javascript" src="js/chili/recipes.js"></script>
-<script type="text/javascript" src="js/raphael2.js"></script>
-<script type="text/javascript" src="js/lib/Base.js"></script>
-<script type="text/javascript" src="js/lib/Creole.js"></script>
-<script type="text/javascript" src="js/talkmaster.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/talkmaster-pretify.js"></script>
+
 <script type="text/javascript">
 
 $(document).ready(function() {
-  new TalkMaster($(".tm-talk-title")[0].innerHTML);
+  talkmaster = new TalkMaster($(".tm-talk-title")[0].innerHTML);
 });
 
 </script>
 <link rel="stylesheet" href="css/talkmaster.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/talkmaster-print.css" type="text/css" media="print" />
+<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+
+<style TYPE="text/css"> 
+</style>
 
 </head>
 <body>
@@ -44,70 +45,34 @@ $(document).ready(function() {
   <!--                                                                       -->
   <!-- Slide formatting:                                                     -->
   <!--                                                                       -->
-  <!-- o everthing inside a class-less pre-tag is expected to be             -->
-  <!--   Creole-formatted wiki markup                                        -->
-  <!--   (see http://www.wikicreole.org/wiki/Creole1.0)                      -->
-  <!--                                                                       -->
-  <!-- o everthing inside a pre-tag with a class name of a programming       -->
-  <!--   language is highlighted as source code using JQuery Chili           -->
-  <!--   (see http://code.google.com/p/jquery-chili-js/)                     -->
+  <!-- o everthing inside pre-tag with the class prettyprint will be         -->
+  <!--   prettified, see                                                     -->
+  <!--   http://google-code-prettify.googlecode.com                          -->
   <!--                                                                       -->
 	<!-- ********************************************************************* -->
 	
 	<!-- Presentation title -->
 	<div class="tm-talk-title">
-	 Template Presentation
+	  Pantalk 
 	</div>
 	
 
-  <!-- Title slide (centered) -->
-	<div class="tm-slide tm-slide-center tm-slide-title" title="Welcome!">
-		<pre>Template Presentation</pre>
-    <span style="font-size: small;">to navigate use SPACE / SHIFT+SPACE or ARROW LEFT / RIGHT (FF only)</span>
-	</div>
+  <div class="tm-slide tm-slide-center" title="About">
+    <h1>Title</h1>
+  </div>
 
-  <!-- Default slide -->
-	<div class="tm-slide" title="Introduction">
-		<pre>
-Paragraph
-* list item
-* list item
-* **bold** text
-* //italic// text
-	  </pre>
-	</div>
-	
-  <!-- Slide with JavaScript code -->
-	<div class="tm-slide" title="JavaScript">
-		<pre>
-Some JavaScript code
-	  </pre>
-	  <pre class="js">
-function sayHello() {
-  alert("Hello world!");
-}</pre>
-	</div>
-	
-  <!-- Slide with Java code -->
-	<div class="tm-slide" title="HTML">
-		<pre>
-Some HTML
-	  </pre>
-	  <pre class="html">
-&lt;ul class="menu">
-  &lt;li>JavaScript&lt;/li>
-  &lt;li>Css&lt;/li>
-  &lt;li>More...&lt;/li>
-&lt;/ul>
+  <div class="tm-slide" title="Java">
+<pre class="prettyprint">
+System.out.println("Hello, world!");
 </pre>
 	</div>
-	
-  <!-- Slide with Ruby code -->
-	<div class="tm-slide tm-slide-title tm-slide-center" title="End">
-		<pre>
-The end
-	  </pre>
+
+  <div class="tm-slide" title="Ruby">
+<pre class="prettyprint">
+puts "Hello, world!"
+</pre>
 	</div>
+
 
 </body>
 </html>
