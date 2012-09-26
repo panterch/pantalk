@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/talkmaster-pretify.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  talkmaster = new TalkMaster($(".tm-talk-title")[0].innerHTML);
+});
+
+</script>
+<link rel="stylesheet" href="css/talkmaster.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/talkmaster-print.css" type="text/css" media="print" />
+<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+
+<style TYPE="text/css"> 
+
+ em {
+  display: block;
+ }
+
+ h1 {
+   font-size: 26pt;
+ }
+</style>
+
+</head>
+<body>
+
+	<div class="tm-header">
+		<div id="bannerLeft">
+			<span class="tm-title-main"></span>: <span class="tm-title"></span>
+		</div>
+		<div class="tm-signum" id="bannerRight">
+			<img alt="" src="img/logo_panter.png">
+		</div>
+	</div>
+
+	<div class="tm-footer">
+		<a class="tm-nav-prev xleft" href="#">&lt;&lt;</a> <a
+			class="tm-nav-next xright" href="#">&gt;&gt;</a>
+	</div>
+	
+	<!-- ********************************************************************* -->
+	<!-- EDIT YOUR PRESENTATION SLIDES BELOW HERE                              -->
+  <!-- ........................................                              -->
+  <!--                                                                       -->
+  <!-- Slide formatting:                                                     -->
+  <!--                                                                       -->
+  <!-- o everthing inside pre-tag with the class prettyprint will be         -->
+  <!--   prettified, see                                                     -->
+  <!--   http://google-code-prettify.googlecode.com                          -->
+  <!--                                                                       -->
+	<!-- ********************************************************************* -->
+	
+	<!-- Presentation title -->
+  <div class="tm-talk-title">
+     Javascript MVC
+	</div>
+	
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>Javascript MVC</h1>
+    <img src='img/javascriptgoodparts.jpg'></img>
+  </div>
+
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>Agenda</h1>
+    <ul style='list-style-type:none'>
+    <li>intro</li>
+    <li>panter js apps</li>
+    <li>backbone</li>
+    <li>ember</li>
+    <li>spine</li>
+    </ul>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>About panter llc</h1>
+    <h1><a href="http://panter.ch/pantalk">http://panter.ch/pantalk</a></h1>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>Who's here</h1>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>Javascript MVC</h1>
+    <img src='img/javascriptmvc.png'></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>Criterias to choose Javascript MVC</h1>
+    <ul style='list-style-type:none'>
+    <li>single page web applications</li>
+    <li>mobile web apps</li>
+    <li>offline apps</li>
+    <li>client side business logic</li>
+    <li>etc.</li>
+    </ul>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>task.li: spine / rails</h1>
+    <img src='img/taskli.png'></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>ri ipad: jquery mobile / spine / rails</h1>
+    <img src='img/ri-ipad.png'></img>
+	</div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>pocketdoc: spine / jee</h1>
+    <img src='img/pocketdoc.png'></img>
+  </div>
+
+  <div class="tm-slide tm-slide-center" title="Backbone, Ember, Spine">
+    <h1>product finder: backbone / jee</h1>
+    <h1>controllr mobile: jquery mobile / spine / rails</h1>
+  </div
+
+
+
+</body>
+</html>
